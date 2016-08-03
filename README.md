@@ -25,3 +25,6 @@ or `vagrant ssh` to log into the VM and run `/opt/spark/bin/pyspark`
 
     vagrant destroy
 
+## References
+
+http://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html
