@@ -78,15 +78,12 @@ Vagrant.configure("2") do |config|
     sudo cp /vagrant/jupyter.environment /etc/jupyter.environment
     sudo cp /vagrant/jupyter.service /etc/systemd/system/jupyter.service
     sudo systemctl daemon-reload
+
+    sudo systemctl enable jupyter.service
     sudo systemctl start jupyter.service
 
+    sudo systemctl disable firewalld
     sudo systemctl stop firewalld
-
-#    export PYSPARK_DRIVER_PYTHON=$(scl enable python27 -- which jupyter)
-#    export PYSPARK_PYTHON=$(scl enable python27 -- which python)
-#    export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=False --NotebookApp.ip='*' --NotebookApp.port=8880"
-#
-#    /opt/spark/bin/pyspark
   SHELL
 
   config.vm.network "forwarded_port", guest:8880, host:8880

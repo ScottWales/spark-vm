@@ -6,7 +6,7 @@ Type=simple
 ExecStart=/usr/bin/scl enable python27 -- /opt/spark/bin/pyspark
 EnvironmentFile=/etc/jupyter.environment
 User=vagrant
-WorkingDirectory=~
+WorkingDirectory=/home/vagrant
 
 [Install]
 WantedBy=default.target
