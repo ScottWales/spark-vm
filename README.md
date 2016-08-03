@@ -18,7 +18,7 @@ macine at `/vagrant`, this is also the default location for Jupyter
 
     vagrant up
 
-You can then go to http://localhost8880 on the host machine to access Jupyter,
+You can then go to http://localhost:8880 on the host machine to access Jupyter,
 or `vagrant ssh` to log into the VM and run `/opt/spark/bin/pyspark`
 
 ### Stop
