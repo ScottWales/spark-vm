@@ -11,15 +11,18 @@ A virtual machine with Spark and Jupyter/Ipython installed
 ## Using the VM
 
 Vagrant manages the virtual machine, downloading a base image and installing
-Spark and Jupyter. Any files in this directory are available on the virtual
-macine at `/vagrant`, this is also the default location for Jupyter
+Spark and Jupyter. The repository directory is mounted on the virtual machine
+as a shared directory, and is available at `/vagrant`. This is also the default
+location for Jupyter, so notebooks created on the VM are saved when the VM is
+shut down.
 
 ### Start
 
     vagrant up
 
-You can then go to http://localhost:8880 on the host machine to access Jupyter,
-or `vagrant ssh` to log into the VM and run `/opt/spark/bin/pyspark`
+You can then go to `localhost:8880` with a web browser on the host machine to
+access Jupyter, or `vagrant ssh` to log into the VM and run
+`/opt/spark/bin/pyspark` (or `spark-shell` for Scala)
 
 ### Stop
 
