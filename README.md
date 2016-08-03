@@ -30,4 +30,5 @@ access Jupyter, or `vagrant ssh` to log into the VM and run
 
 ## References
 
+http://spark.apache.org/docs/latest/quick-start.html
 http://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html
